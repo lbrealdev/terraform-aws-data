@@ -21,3 +21,8 @@ module "data_cloudfront" {
   id = "E37DDHOS4ER8M7"
 }
 
+module "data_s3" {
+  source = "./modules/s3"
+
+  bucket = "s3frontuatcaucion"
+}

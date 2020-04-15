@@ -24,10 +24,8 @@ module "data_cloudfront" {
 module "data_s3" {
   source = "./modules/s3"
 
-  bucket = [
-    {
-      bucket1 = "s3frontuatcaucion"
-      bucket2 = "s3staticsuatcaucion"
-    }
-  ]
+  bucket = {
+    bucket1 = "s3frontuatcaucion"
+    bucket2 = "s3staticsuatcaucion"
+  }
 }

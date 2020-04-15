@@ -7,5 +7,7 @@ terraform {
 }
 
 data "aws_s3_bucket" "main" {
-  bucket = var.bucket
+  for_each = var.bucket
+
+  bucket = each.value
 }

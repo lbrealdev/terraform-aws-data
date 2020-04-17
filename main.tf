@@ -15,11 +15,11 @@ terraform {
 # GET DATA FROM RESOURCES AWS
 # ---------------------------------------------------------------------------------------------------------------------
 
-/*module "data_cloudfront" {
+module "data_cloudfront" {
   source = "./modules/cloudfront"
 
   id = "E37DDHOS4ER8M7"
-}*/
+}
 
 module "data_cognito" {
   source = "./modules/cognito"
@@ -27,7 +27,6 @@ module "data_cognito" {
   name = "CognitoUserPoolDevCaucion"
 }
 
-/*
 module "data_s3" {
   source = "./modules/s3"
 
@@ -35,4 +34,4 @@ module "data_s3" {
     bucket1 = "s3frontuatcaucion"
     bucket2 = "s3staticsuatcaucion"
   }
-}*/
+}

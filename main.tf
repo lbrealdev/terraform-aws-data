@@ -12,13 +12,19 @@ terraform {
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
-# GET DATA FROM CLOUDFRON
+# GET DATA FROM RESOURCES AWS
 # ---------------------------------------------------------------------------------------------------------------------
 
 module "data_cloudfront" {
   source = "./modules/cloudfront"
 
   id = "E37DDHOS4ER8M7"
+}
+
+module "data_cognito" {
+  source = "./modules/cognito"
+
+  name = "CognitoUserPoolDevCaucion"
 }
 
 module "data_s3" {

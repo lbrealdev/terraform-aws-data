@@ -18,7 +18,7 @@ terraform {
 module "data_cloudfront" {
   source = "./modules/cloudfront"
 
-  id = "E37DDHOS4ER8M7"
+  /*id = "E37DDHOS4ER8M7"*/
 }
 
 module "data_cognito" {
@@ -30,8 +30,8 @@ module "data_cognito" {
 module "data_s3" {
   source = "./modules/s3"
 
-  bucket = {
+  /*bucket = {
     bucket1 = "s3frontuatcaucion"
     bucket2 = "s3staticsuatcaucion"
-  }
+  }*/
 }

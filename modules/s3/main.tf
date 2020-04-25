@@ -14,5 +14,5 @@ data "aws_s3_bucket" "main" {
   count = var.data ? length(var.bucket) : 0
   /*for_each = var.bucket*/
 
-  bucket = var.bucket[count.index]
+  bucket = var.bucket[*]
 }

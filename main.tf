@@ -33,5 +33,9 @@ module "data_s3" {
   source = "./modules/s3"
 
   data   = true
-  bucket = ["s3frontdevcaucion", "s3staticsdevcaucion", "s3backendterraformdevcaucion"]
+  bucket = [
+    "s3frontdevcaucion",
+    "s3staticsdevcaucion",
+    "s3backendterraformdevcaucion"
+  ]
 }

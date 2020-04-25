@@ -12,5 +12,5 @@ terraform {
 
 data "aws_kms_alias" "main" {
   count = var.data ? length(var.name) : 0
-  name = var.name
+  name = var.name[count.index]
 }

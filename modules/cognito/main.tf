@@ -11,6 +11,6 @@ terraform {
 # ---------------------------------------------------------------------------------------------------------------------
 
 data "aws_cognito_user_pools" "main" {
-  count = var.data || var.name != "" ? length(split(",", var.name)): 0
-  name  = var.name
+  count = var.data ? length(var.name) : 0
+  name  = split(",", var.name)
 }

@@ -11,6 +11,6 @@ terraform {
 # ---------------------------------------------------------------------------------------------------------------------
 
 data "aws_s3_bucket" "main" {
-  count  = var.data ? length(var.bucket) : 0
+  count  = var.data || var.bucket != "" ? length(split(",", var.bucket)): 0
   bucket = var.bucket[count.index]
 }

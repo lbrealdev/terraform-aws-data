@@ -1,3 +1,4 @@
+/*
 output "bucket_name" {
   value = values(data.aws_s3_bucket.main)[*].bucket
 }
@@ -12,4 +13,4 @@ output "website_domain" {
 
 output "website_endpoint" {
   value = values(data.aws_s3_bucket.main)[*].website_endpoint
-}
+}*/

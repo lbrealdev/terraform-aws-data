@@ -32,6 +32,7 @@ module "data_cognito" {
 module "data_s3" {
   source = "./modules/s3"
 
+  data = true
   bucket = {
     bucket1 = "s3frontdevcaucion"
     bucket2 = "s3staticsdevcaucion"

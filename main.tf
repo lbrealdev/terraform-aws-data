@@ -32,7 +32,7 @@ module "data_cognito" {
 module "data_s3" {
   source = "./modules/s3"
 
-  data   = true
+  data = true
   bucket = [
     "s3frontdevcaucion",
     "s3staticsdevcaucion",

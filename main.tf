@@ -26,7 +26,7 @@ module "data_cognito" {
   source = "./modules/cognito"
 
   data = true
-  name = ["CognitoUserPoolDevCaucion"]
+  name = "CognitoUserPoolDevCaucion"
 }
 
 module "data_s3" {

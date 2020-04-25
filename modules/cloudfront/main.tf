@@ -6,6 +6,11 @@ terraform {
   required_version = "~> 0.12"
 }
 
+# ---------------------------------------------------------------------------------------------------------------------
+# GET ALL DATA FROM AMAZON CLOUDFRONT DISTRIBUTION
+# ---------------------------------------------------------------------------------------------------------------------
+
 data "aws_cloudfront_distribution" "main" {
-  id = var.id
+  count = var.data ? 1 : 0
+  id    = var.id
 }

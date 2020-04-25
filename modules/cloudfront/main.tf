@@ -12,5 +12,5 @@ terraform {
 
 data "aws_cloudfront_distribution" "main" {
   count = var.data ? length(var.id) : 0
-  id    = var.id
+  id    = var.id[count.index]
 }

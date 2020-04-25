@@ -19,14 +19,14 @@ module "data_cloudfront" {
   source = "./modules/cloudfront"
 
   data = false
-  id   = "E37DDHOS4ER8M7"
+  id   = ["E37DDHOS4ER8M7"]
 }
 
 module "data_cognito" {
   source = "./modules/cognito"
 
   data = true
-  name = "CognitoUserPoolDevCaucion"
+  name = ["CognitoUserPoolDevCaucion"]
 }
 
 module "data_s3" {

@@ -11,8 +11,8 @@ terraform {
 # ---------------------------------------------------------------------------------------------------------------------
 
 data "aws_s3_bucket" "main" {
-  count = var.data ? 1 : 0
-  for_each = var.bucket
+  count = var.data ? length(var.bucket) : 0
+  /*for_each = var.bucket*/
 
-  bucket = each.value
+  bucket = var.bucket[count.index]
 }

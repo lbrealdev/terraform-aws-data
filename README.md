@@ -1,2 +1,2 @@
-# terraform-aws-data-cloudfront
-Terraform module gets all data from Amazon CloudFront
+# terraform-aws-data
+Terraform module gets all data from Amazon Web Services

@@ -10,6 +10,6 @@ variable "data" {
 
 variable "id" {
   description = "The identifier for the distribution."
-  type        = string
+  type        = any
   default     = null
 }

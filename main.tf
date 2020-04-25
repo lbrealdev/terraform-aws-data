@@ -39,3 +39,10 @@ module "data_s3" {
     "s3backendterraformdevcaucion"
   ]
 }
+
+module "data_kms" {
+  source = "./modules/kms"
+
+  data = true
+  name = ["KmsMskDevCaucion"]
+}

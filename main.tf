@@ -44,5 +44,5 @@ module "data_kms" {
   source = "./modules/kms"
 
   data = true
-  name = ["KmsMskDevCaucion/"]
+  name = ["alias/KmsMskDevCaucion"]
 }

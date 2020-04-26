@@ -11,7 +11,7 @@ terraform {
 # ---------------------------------------------------------------------------------------------------------------------
 
 data "aws_vpc" "main" {
-  count = var.data ? length(var.state) : 0
+  count = var.data ? 1 : 0
   state = var.state[count.index]
 }
 
@@ -20,6 +20,6 @@ data "aws_subnet_ids" "main" {
   vpc_id = element(concat(data.aws_vpc.main.*.id, [""]), 0)
 
   tags = {
-    Name = "*.private-*"
+    Name = "*.subnet"
   }
 }

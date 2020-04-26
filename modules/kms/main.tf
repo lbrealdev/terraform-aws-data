@@ -16,6 +16,6 @@ data "aws_kms_alias" "main" {
 }
 
 data "aws_kms_key" "main" {
-  count  = var.data || data.aws_kms_alias.main ? length(var.name) : 0
+  count  = var.data || data.aws_kms_alias.main != "" ? length(var.name) : 0
   key_id = "${var.alias}${var.name[count.index]}"
 }

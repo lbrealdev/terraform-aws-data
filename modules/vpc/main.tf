@@ -28,3 +28,10 @@ data "aws_network_acls" "main" {
   count  = var.data && data.aws_vpc.main != "" ? 1 : 0
   vpc_id = element(concat(data.aws_vpc.main.*.id, [""]), 0)
 }
+
+data "aws_internet_gateway" "main" {
+  filter {
+    name   = "*.igw"
+    values = [element(concat(data.aws_vpc.main.*.id, [""]), 0)]
+  }
+}

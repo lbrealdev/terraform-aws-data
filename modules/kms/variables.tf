@@ -8,6 +8,12 @@ variable "data" {
   type        = bool
 }
 
+variable "alias" {
+  description = "Name default for KMS (alias/aws/s3)"
+  type        = string
+  default     = "alias/"
+}
+
 variable "name" {
   description = "The display name of the alias."
   type        = any

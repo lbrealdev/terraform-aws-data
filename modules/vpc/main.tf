@@ -11,7 +11,7 @@ terraform {
 # ---------------------------------------------------------------------------------------------------------------------
 
 data "aws_vpc" "main" {
-  count = var.data && var.state == "" ? length(var.state) : 0
+  count = var.data ? length(var.state) : 0
   state = var.state[count.index]
 }
 

@@ -15,6 +15,13 @@ terraform {
 # GET DATA FROM RESOURCES AWS
 # ---------------------------------------------------------------------------------------------------------------------
 
+module "data_vpc" {
+  source = "./modules/vpc"
+
+  data  = true
+  state = ["available"]
+}
+
 module "data_cloudfront" {
   source = "./modules/cloudfront"
 

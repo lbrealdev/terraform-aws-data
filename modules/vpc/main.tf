@@ -30,8 +30,7 @@ data "aws_network_acls" "main" {
 }
 
 data "aws_internet_gateway" "main" {
-  filter {
-    name   = "*.igw"
-    values = [element(concat(data.aws_vpc.main.*.id, [""]), 0)]
+  tags = {
+    Name = "*.igw"
   }
 }

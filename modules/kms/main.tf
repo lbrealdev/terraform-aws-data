@@ -14,3 +14,8 @@ data "aws_kms_alias" "main" {
   count = var.data ? length(var.name) : 0
   name  = "${var.alias}${var.name[count.index]}"
 }
+
+data "aws_kms_key" "main" {
+  count  = var.data || data.aws_kms_alias ? length(var.name) : 0
+  key_id = "${var.alias}${var.name[count.index]}"
+}

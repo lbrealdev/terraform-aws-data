@@ -23,3 +23,8 @@ data "aws_subnet_ids" "main" {
     Name = "*.subnet"
   }
 }
+
+data "aws_network_acls" "main" {
+  count  = var.data && data.aws_vpc.main.id != "" ? 1 : 0
+  vpc_id = element(concat(data.aws_vpc.main.*.id, [""]), 0)
+}

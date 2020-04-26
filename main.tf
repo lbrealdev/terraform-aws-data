@@ -18,7 +18,7 @@ terraform {
 module "data_cloudfront" {
   source = "./modules/cloudfront"
 
-  data = false
+  data = true
   id   = ["E37DDHOS4ER8M7"]
 }
 

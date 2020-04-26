@@ -17,7 +17,7 @@ data "aws_vpc" "main" {
 
 data "aws_subnet_ids" "main" {
   count  = var.data && data.aws_vpc.main != "" ? 1 : 0
-  vpc_id = data.aws_vpc.main.id
+  vpc_id = data.aws_vpc.main[count.index].id
 
   tags = {
     Name = "*.private-*"
